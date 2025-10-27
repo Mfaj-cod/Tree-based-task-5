@@ -32,11 +32,10 @@ def train_evaluate(x_train, x_test, y_train, y_test, feature_names=None, class_n
             rocauc = "N/A (binary labels not suitable)"
         cm = confusion_matrix(y_test, y_pred)
 
-        # save PDF report
         pdf_path = os.path.join(reports_dir, f"{model_name.replace(' ', '_')}_report.pdf")
 
         with PdfPages(pdf_path) as pdf:
-            # Page 1
+            # page-1
             fig = plt.figure(figsize=(8.27, 11.69))  # A4
             txt = (
                 f"Model: {model_name}\n\n"
