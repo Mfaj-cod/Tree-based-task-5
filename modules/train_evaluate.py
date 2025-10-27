@@ -47,7 +47,8 @@ def train_evaluate(x_train, x_test, y_train, y_test, feature_names=None, class_n
                 f"F1 Score: {f1:.4f}\n"
                 f"ROC-AUC: {rocauc}\n\n"
                 f"Confusion Matrix:\n{cm}\n\n"
-                f"Classification Report:\n{classification_report(y_test, y_pred)}"
+                f"Classification Report:\n{classification_report(y_test, y_pred)}\n\n"
+                f"Feature Importance:\n {model.feature_importances_}"
             )
 
             plt.text(
